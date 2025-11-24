@@ -37,6 +37,12 @@
 #include "hardware/clocks.h"
 #include "hardware/exception.h"
 
+// Quick patch - sam
+#ifndef SIO_IRQ_PROC0
+/* Temporary: unblock build — fix the include path as soon as possible */
+#define SIO_IRQ_PROC0 15
+#endif
+
 /*
  * LIB_PICO_MULTICORE == 1, if we are linked with pico_multicore (note that
  * the non SMP FreeRTOS_Kernel is not linked with pico_multicore itself). We
